@@ -1,0 +1,28 @@
+int LED=3;
+int i;
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(LED, OUTPUT);
+  pinMode(3, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  int LED=3;
+  int i;
+  for (i = 0; i <= 255; i++) // LED wird hochgeschraubt auf 255 und vorher auf 0 gesetzt
+  {
+    analogWrite(LED, i);
+    delay(5);
+  }
+  for (i = 255; i >= 0; i--) // LED wird auf 255 gesetzt, dann runtergeschreibt bis 0
+  {
+    analogWrite(LED, i);
+    delay(5);
+  }
+    
+
+
+
+}
