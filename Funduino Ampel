@@ -1,0 +1,42 @@
+
+int led_rot = 3;
+int led_gelb = 4;
+int led_gruen = 5;
+int taster = 2;
+void setup() 
+{
+  pinMode(taster, INPUT_PULLUP);
+  pinMode(led_rot, OUTPUT);
+  pinMode(led_gelb, OUTPUT);
+  pinMode(led_gruen, OUTPUT);
+}
+
+void loop()
+{
+  if(digitalRead(taster) == LOW)
+  {
+  digitalWrite (led_rot, HIGH);
+  digitalWrite (led_gelb, HIGH);
+  digitalWrite (led_gruen, LOW);
+  delay(700);
+  digitalWrite (led_rot, LOW);
+  digitalWrite (led_gelb, LOW);
+  digitalWrite (led_gruen, HIGH);
+  delay(5000);
+  digitalWrite (led_rot, LOW);
+  digitalWrite (led_gelb, HIGH);
+  digitalWrite (led_gruen, LOW);
+  delay(700);
+  digitalWrite (led_rot, HIGH);
+  digitalWrite (led_gelb, LOW);
+  digitalWrite (led_gruen, LOW);
+  delay(700);
+  }
+  else
+  {
+  digitalWrite (led_rot, HIGH);
+  digitalWrite (led_gelb, LOW);
+  digitalWrite (led_gruen, LOW);
+  }
+  
+}
